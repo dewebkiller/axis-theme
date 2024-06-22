@@ -9,20 +9,6 @@ function theme_setup() {
 }
 add_action( 'after_setup_theme', 'theme_setup' );
 
-/**
- * ACF Options Page 
- *
- */
-function be_acf_options_page() {
-    if (!function_exists('acf_add_options_page'))
-        return;
-
-    acf_add_options_page(array(
-        'title' => 'Site Options',
-        'capability' => 'manage_options',
-    ));
-}
-add_action('init', 'be_acf_options_page');
 add_theme_support('post-thumbnails');
 add_image_size('banner', 1350, 500, true);
 add_image_size('dewebkiller', 830, 340, true);
