@@ -37,6 +37,7 @@ add_action('init', 'register_glasseye_menus');
 //Include external files
 require_once(TEMPLATEPATH . '/inc/custom-post.php');
 require_once(TEMPLATEPATH . '/inc/enqueues.php');
+require_once(TEMPLATEPATH . '/inc/courses_type.php');
 
 
 

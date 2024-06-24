@@ -46,6 +46,10 @@ h1 {
   line-height: 1;
   margin: 10px 0;
 }
+.simnple-content h1 {
+  font-size: 45px;
+  color: var(--color-orange);
+}
 a,
 a:hover {
   text-decoration: none;
@@ -247,15 +251,16 @@ header {
   margin: 0;
 }
 .dropdown .dropdown-menu {
-  opacity: 0;
+  display: none;
   transform: translate3d(0, 10px, 0);
   transition: all 200ms linear;
 }
-.dropdown.open .dropdown-menu {
+.dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
   max-height: 999px;
   transform: translate3d(0, 0px, 0);
+  display: block;
 }
 
 .navbar-fixed-top {
@@ -703,6 +708,7 @@ gap: 20px;
 .tools-marquee h3 {
   font-size: 16px;
   text-align: center;
+  text-transform: capitalize;
   margin: 5px 0 0 0;
 }
 /* Testimonial swiper slider end */

@@ -37,7 +37,38 @@ jQuery(document).ready(function ($) {
         return false;
     });
     //Add div clearfix after 3 list
-    $("ul.services-ul li:nth-child(3n)").after("<div class='clearfix'></div>")
+    $("ul.services-ul li:nth-child(3n)").after("<div class='clearfix'></div>");
+    jQuery('.navbar-nav li').addClass('nav-item');
+    jQuery('.navbar-nav > li > a').addClass('nav-link');
+    jQuery('.navbar-nav > li.menu-item-has-children').addClass('dropdown');
+    jQuery('.navbar-nav > li.menu-item-has-children ul.sub-menu').addClass('dropdown-menu');
+    jQuery('.sub-menu > li > a').addClass('dropdown-item hvr-sweep-to-right');
+    jQuery('.menu-item-has-children  > a').addClass('dropdown-toggle');
+
+   // Toggle dropdown menu on click
+   $('.dropdown-toggle').on('click', function(e) {
+    e.preventDefault(); // Prevent default anchor behavior
+
+    var $el = $(this);
+    var $parent = $el.offsetParent(".dropdown-menu");
+
+    // Toggle this dropdown
+    var $subMenu = $el.next(".dropdown-menu");
+    $subMenu.toggleClass('show');
+
+    // Close all other dropdowns
+    $('.dropdown-menu').not($subMenu).removeClass('show');
+
+    return false;
+});
+
+// Close dropdowns when clicking outside
+$(document).on('click', function(e) {
+    if (!$(e.target).closest('.dropdown-toggle').length) {
+        $('.dropdown-menu').removeClass('show');
+    }
+});
+
     var swiper = new Swiper(".swiper-popular-courses", {
         slidesPerView: 3, 
         breakpoints: {

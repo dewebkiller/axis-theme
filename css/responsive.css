@@ -6,7 +6,7 @@
   }
 
   .navbar-fixed-top {
-    position: relative;
+    position: fixed;
   }
   .top-header,
   .banner-caption {
@@ -28,6 +28,16 @@
   .navbar-expand-lg .navbar-nav {
     gap: 10px;
   }
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 999px;
+    transform: translate3d(0, 0px, 0);
+    display: none;
+}
+.dropdown .dropdown-menu.show {
+  display: block;
+}
   .btm-header .main-menu {
     float: right;
     position: relative;
@@ -49,6 +59,9 @@
   }
   .dwk_tab_content {
     padding: 0;
+  }
+  .author-credit {
+    text-align: center !important;
   }
   .btm-footer {
     padding-bottom: 80px;

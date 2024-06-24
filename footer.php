@@ -1,3 +1,15 @@
+<?php
+$business_tagline = get_field('business_tagline', 'option');
+$business_address= get_field('business_address', 'option');
+$business_phone = get_field('business_phone', 'option');
+$business_google_map= get_field('business_google_map', 'option');
+$business_email = get_field('business_email', 'option');
+$business_facebook = get_field('business_facebook', 'option');
+$business_instagram = get_field('business_instagram', 'option');
+$business_linkedin = get_field('business_linkedin', 'option');
+$business_youtube = get_field('business_youtube', 'option');
+
+?>
 <footer class="section-padding">
     <div class="container">
         <!-- Three column Footer -->
@@ -6,9 +18,9 @@
                 <div class="footer-widget">
                     <img src="<?php echo bloginfo('template_url' );?>/images/logo.png" alt="Axis Infosys" class="footer-logo" />
                     <ul>
-                        <li><i class="fa fa-home"></i> Gaighat udayapur</li>
-                        <li><i class="fa fa-phone"></i> 9841786680</li>
-                        <li><i class="fa fa-envelope"></i> <a href="mailto:info@axisinfosys.com">info@axisinfosys.com</a></li>
+                        <li><i class="fa fa-home"></i> <?php echo $business_address;?></li>
+                        <li><i class="fa fa-phone"></i> <?php echo $business_phone;?></li>
+                        <li><i class="fa fa-envelope"></i> <a href="mailto:<?php echo $business_email;?>"><?php echo $business_email;?></a></li>
                     </ul>
                 </div>
             </div>
@@ -38,9 +50,9 @@
             <div class="footer-widget">
             <h3>Get Connected</h3>
                 <ul class="footer-social d-flex mb-3">
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <?php if($business_facebook) { ?> <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li> <? } ?>
+                    <?php if ($business_instagram) { ?><li><a href="#"><i class="fa-brands fa-instagram"></i></a></li><? } ?>
+                    <?php if ($business_linkedin) { ?> <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li><? } ?>
                 </ul>
                     <h3>We accept</h3>
                     <ul class="footer-payment d-flex">
@@ -61,7 +73,7 @@
                     <p class="color-white">&copy; <?php echo date('Y');?>. <span>Axis Infosys.</span> All Rights Reserved.</p>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 text-end">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 text-end author-credit">
                 <div class="text-right">
                 <a href="https://www.dewebkiller.com" class="color-white" target="_blank" title="<dewebkiller/>">&lt;dewebkiller /&gt;</a>
                 </div>

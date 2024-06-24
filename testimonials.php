@@ -1,187 +1,39 @@
-<?php include_once('header-inner.php'); ?>
+<?php 
+/* Template Name: Testimonials */
+get_header('inner');
+?>
 
 <section class="content-wrapper section-padding testimonial-section-inner">
     <div class="container">
         <div class="row">
-
-
-
+        <?php
+                  $args1 = array(
+                    'post_type' => 'dwk_success_stories',
+                    'posts_per_page' => -1,
+                    'orderby' => 'date',
+                    'order' => 'DESC'
+                  );
+                  $loop1 = new WP_Query($args1);
+                  while ($loop1->have_posts()) : $loop1->the_post();
+                    $svg = get_field('svg_code');
+                  ?>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 pull-left wow  fadeInLeft  animated">
                 <div class="slider__images">
                     <div class="slider__image">
-                        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
+                    <p><?php the_content(); ?></p>
                         <div class="testimonial-author">
-                            <img src="images/students.png" alt="">
+                        <?php the_post_thumbnail('dwk_banner', ['class' => 'img-responsive responsive--full', 'title' => 'the_title', 'alt' => 'the_title']); ?>
                             <div class="testimonial-author-details">
-                                <h4>Niresh Shresatha</h4>
-                                <h5>Lincoln college</h5>
+                            <h4><?php the_title(); ?></h4>
+                            <h5><?php echo get_field('success_stories_tagline'); ?></h5>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 pull-left wow  fadeInLeft  animated">
-                <div class="slider__images">
-                    <div class="slider__image">
-                        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                        <div class="testimonial-author">
-                            <img src="images/students.png" alt="">
-                            <div class="testimonial-author-details">
-                                <h4>Niresh Shresatha</h4>
-                                <h5>Lincoln college</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 pull-left wow  fadeInLeft  animated">
-                <div class="slider__images">
-                    <div class="slider__image">
-                        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                        <div class="testimonial-author">
-                            <img src="images/students.png" alt="">
-                            <div class="testimonial-author-details">
-                                <h4>Niresh Shresatha</h4>
-                                <h5>Lincoln college</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 pull-left wow  fadeInLeft  animated">
-                <div class="slider__images">
-                    <div class="slider__image">
-                        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                        <div class="testimonial-author">
-                            <img src="images/students.png" alt="">
-                            <div class="testimonial-author-details">
-                                <h4>Niresh Shresatha</h4>
-                                <h5>Lincoln college</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 pull-left wow  fadeInLeft  animated">
-                <div class="slider__images">
-                    <div class="slider__image">
-                        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                        <div class="testimonial-author">
-                            <img src="images/students.png" alt="">
-                            <div class="testimonial-author-details">
-                                <h4>Niresh Shresatha</h4>
-                                <h5>Lincoln college</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 pull-left wow  fadeInLeft  animated">
-                <div class="slider__images">
-                    <div class="slider__image">
-                        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                        <div class="testimonial-author">
-                            <img src="images/students.png" alt="">
-                            <div class="testimonial-author-details">
-                                <h4>Niresh Shresatha</h4>
-                                <h5>Lincoln college</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 pull-left wow  fadeInLeft  animated">
-                <div class="slider__images">
-                    <div class="slider__image">
-                        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                        <div class="testimonial-author">
-                            <img src="images/students.png" alt="">
-                            <div class="testimonial-author-details">
-                                <h4>Niresh Shresatha</h4>
-                                <h5>Lincoln college</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 pull-left wow  fadeInLeft  animated">
-                <div class="slider__images">
-                    <div class="slider__image">
-                        <p>“On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.”</p>
-                        <div class="testimonial-author">
-                            <img src="images/students.png" alt="">
-                            <div class="testimonial-author-details">
-                                <h4>Niresh Shresatha</h4>
-                                <h5>Lincoln college</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
         </div>
     </div>
 </section>
-<section class="section-padding section-tools-marquee">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="swiper-container swiper--bottom">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="tools-marquee">
-                                <img src="images/aftereffects.jpg" alt="" />
-                                <h3>After effects</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tools-marquee">
-                                <img src="images/indesign.jpg" alt="" />
-                                <h3>Indesign</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tools-marquee">
-                                <img src="images/mediaencoder.jpg" alt="" />
-                                <h3>After effects</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tools-marquee">
-                                <img src="images/mspackage.jpg" alt="" />
-                                <h3>After effects</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tools-marquee">
-                                <img src="images/premoere.jpg" alt="" />
-                                <h3>After effects</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tools-marquee">
-                                <img src="images/photoshop.png" alt="" />
-                                <h3>After effects</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tools-marquee">
-                                <img src="images/illustrator.png" alt="" />
-                                <h3>After effects</h3>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="tools-marquee">
-                                <img src="images/bootstrap.png" alt="" />
-                                <h3>After effects</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<?php include_once('footer.php');
+<?php get_template_part('includes/tools', 'marquee'); ?>
+<?php get_footer();
