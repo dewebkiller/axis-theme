@@ -22,7 +22,7 @@ $business_phone = get_field('business_phone', 'option');
             </defs>
             <text font-size="17">
                 <textPath xlink:href="#circle">
-                    - <?php echo $circular_text;?> - <?php echo $circular_text;?>
+                - <?php echo esc_html($circular_text); ?> - <?php echo esc_html($circular_text); ?>
                 </textPath>
 
             </text>

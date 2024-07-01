@@ -28,7 +28,7 @@
               while (have_rows('why_choose_us')) : the_row();
             ?>
                 <li>
-                  <p><?php echo get_sub_field('why_choose_us_description'); ?></p>
+                  <?php echo get_sub_field('why_choose_us_description'); ?>
                 </li>
             <?php
               endwhile;
