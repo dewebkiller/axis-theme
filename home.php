@@ -10,26 +10,6 @@ $address_line_3 = get_field('address_line_3', 'option');
 $google_map = get_field('google_map', 'option');
 $business_phone = get_field('business_phone', 'option');
 ?>
-<div class="circular-text">
-    <a href="https://www.youtube.com" target="_blank">
-        <svg viewBox="0 0 100 100" width="100" height="100">
-            <defs>
-                <path id="circle" d="
-        M 50, 50
-        m -37, 0
-        a 37,37 0 1,1 74,0
-        a 37,37 0 1,1 -74,0" />
-            </defs>
-            <text font-size="17">
-                <textPath xlink:href="#circle">
-                - <?php echo esc_html($circular_text); ?> - <?php echo esc_html($circular_text); ?>
-                </textPath>
-
-            </text>
-        </svg>
-        <span><i class="fa fa-play"></i></span>
-    </a>
-</div>
 <?php get_template_part('includes/courses', 'tab'); ?>
 <?php get_template_part('includes/teaching', 'methodology'); ?>
 <?php get_template_part('includes/why', 'us'); ?>

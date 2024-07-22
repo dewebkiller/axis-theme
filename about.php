@@ -13,20 +13,16 @@ get_header('inner');
             <div class="simple-mage">
               <?php
               // Must be inside a loop.
-
               if (has_post_thumbnail()) {
                 the_post_thumbnail();
               } else {
                 echo '<img src="' . get_bloginfo('stylesheet_directory')
                   . '/images/benifits.png" />';
               }
-              ?>
-             
+              ?> 
             </div>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-12 list-style pull-left">
-
-
             <h5 class="btn btn-sm color-primary px-3 hvr-fade bg-primary-shade-1"><?php the_title(); ?></h5>
         <?php
           the_content();
@@ -34,7 +30,6 @@ get_header('inner');
       } // end if
         ?>
           </div>
-
     </div>
   </div>
 </section>
@@ -99,6 +94,5 @@ get_header('inner');
     </div>
   </div>
 </section>
-
 <?php get_template_part('includes/tools', 'marquee'); ?>
 <?php get_footer();

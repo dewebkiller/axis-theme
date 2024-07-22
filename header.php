@@ -5,14 +5,12 @@ $banner_section_text = get_field('banner_section_text');
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="dewebkiller">
     <?php wp_head(); ?>
 </head>
-
 <body class="<?php body_class() ?>">
     <header>
         <section class="btm-header">
